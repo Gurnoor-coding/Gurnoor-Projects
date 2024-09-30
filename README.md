@@ -1,1 +1,2 @@
-# Some projects I want to show that I did. You can check each of the branches for a different project.
+# Some projects I want to show that I did. This is my article summarizer.
+It basically takes an article and parses through it for a summary. It has some other features. I have a video demonstration. Note that due to my screen recording my wifi was slow so the application should run faster if/when I publish it. Just need to fix the spacing issue, the authors don't have spaces, but that is easy to do, I just have to get this project out as soon as possible. 
