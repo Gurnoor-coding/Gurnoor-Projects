@@ -1,1 +1,3 @@
-# Some projects I want to show that I did.
+# Some projects I want to show that I did. This first project used google colab to implement models. 
+
+I took test and trained data sets, imported models for scikit, and made them train and predict. I tested three models and evaluated them with r^2 score and mse. I put them in a graph and table. I found that linear regression was the best. Inside the project are some more notes on what I did. Cool to use pandas and scikit for the first time. Github can't load the display scikit functions so if you want to see them you can access the google colab, but github still allows the functions to work behind the scenes so its not a big deal. 
