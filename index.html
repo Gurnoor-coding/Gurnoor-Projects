@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music Player</title> 
+<link rel="stylesheet" href="style.css"> 
+
+
+
+
+</head>
+<script src="https://kit.fontawesome.com/82c36ee671.js" crossorigin="anonymous"></script> <!--we just copied a sciprt online-->
+<body>
+    <div class="container"> 
+
+
+        <div class ="music-player"> 
+                
+                
+                <nav> 
+                  
+
+                    <a href="https://github.com/Gurnoor-coding">
+                    <div  class="circle">
+                        <i class="fa-solid fa-angle-left"></i> 
+                       
+                   
+                    </div>
+                    </a>
+                    <div class="circle"  id="menuButton">
+                        <i class="fa-solid fa-bars"></i>
+                       
+                        <div class="menu" id="menu">
+                            <div class="menu-item" id="option1">IMMORTAL</div>
+                            <div class="menu-item" id="option2">Free Guy</div>
+                            <div class="menu-item" id="option3">Aww Man</div>
+                                
+
+
+
+
+                    </div>
+                </nav>
+                <img src="C:\Users\yeye6\OneDrive\MusicProject\FFENEXIMG.jpg" class="song-img" id="musicImage"> <!-- copied its link and added image-->
+                <h1>Immortal</h1>
+                <p>FEENEX</p>
+        
+                <audio id="song" > 
+                    <source src="C:\Users\yeye6\OneDrive\MusicProject\Immortal - NEFFEX.mp3" type="audio/mpeg"
+                            
+                    
+                    
+                
+                    
+                    
+                    >
+                </audio> 
+                <input type="range" value="0" id="progress"  min="0" max="180"> 
+                <div class="controls"> 
+                    <div class="clicker" onclick="skipbackward()" ><i class="fa-solid fa-backward"></i></div>  
+                    <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrl_item" ></i></div>  
+                    <div class="clicker" onclick="skipforward()"><i class="fa-solid fa-forward"></i></div>  
+                      
+                
+                </div>
+        </div>
+    
+    <script>
+        let progress = document.getElementById("progress"); 
+        let song = document.getElementById("song");
+        let ctrl_item = document.getElementById("ctrl_item");
+        song.onloadmetadata = function(){
+            progress.max = song.duration;            
+            progress.value = song.currentTime;
+        }
+        function playPause(){ 
+            if (ctrl_item.classList.contains("fa-pause")){ 
+             
+                song.pause(); 
+                ctrl_item.classList.remove("fa-pause");
+                ctrl_item.classList.add("fa-play");
+            }
+            else{
+                song.play();
+                ctrl_item.classList.add("fa-pause");
+                ctrl_item.classList.remove("fa-play");
+            }
+        }
+
+
+        if(song.play())
+        {
+            setInterval(()=>{
+                progress.value =song.currentTime;},500);
+            }
+        progress.onchange = function(){
+            song.play();
+            song.currentTime = progress.value
+            ctrl_item.classList.add("fa-pause");  
+            ctrl_item.classList.remove("fa-play");
+        }
+        
+
+
+       
+        function skipforward(){
+            song.currentTime += 10;
+        }
+        function skipbackward(){
+            song.currentTime -= 10;
+        }
+    
+    
+
+
+
+    
+        document.getElementById("menuButton").addEventListener("click", function() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "none" || menu.style.display === "" ? "block" : "none";
+});
+
+
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("menu");
+    const button = document.getElementById("menuButton");
+    if (!button.contains(event.target) && !menu.contains(event.target)) {
+        menu.style.display = "none";
+    }
+});
+
+
+document.getElementById("option1").addEventListener("click", function() {
+    alert("You selected Option 1");
+});
+
+
+
+
+document.getElementById("option2").addEventListener("click", function() {
+
+    window.location.href = "C:/Users/yeye6/OneDrive/MusicProject/index2.html";
+});
+
+
+
+
+
+
+document.getElementById("option3").addEventListener("click", function() {
+    window.location.href = "C:/Users/yeye6/OneDrive/MusicProject/index3.html";
+});
+//
+    
+    </script>
+    
+    
+    </div>
+
+
+
+</body>
+
+
+
+
+
+</html>

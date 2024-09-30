@@ -1,0 +1,222 @@
+*{
+
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+.container
+{
+width: 100%;
+height: 100vh;
+background: #333;
+/* Properties of div made its width all of it and heigh too vh stands for viewport height 
+background color
+
+*/
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+
+
+
+}
+
+.music-player{
+
+    width: 400px;
+padding: 25px 35px;
+background: #86798f; /*#ffe0e5 WAS orginial*/
+text-align: center;
+/* text alighn makes the text center of box
+
+*/
+}
+
+nav{
+    display:flex; /* allows us to make them flexible*/
+    justify-content: space-between;/* anything in nav tag has a space between it  */
+    margin-bottom: 30px;
+}
+
+nav .circle{
+
+    border-radius: 50%; /*the corners of our divs beocme circle*/
+    width: 40px; /*width of div*/
+    height: 40px; /*height of divs*/
+    line-height: 40px; /*centers our icons with the div*/
+    background: #fff; /*background is white of div div is white circle*/
+    color: #f53192; /*anything inside div is just pink*/
+    
+   
+    box-shadow: 0 5px 10px  rgba(255, 26, 26, 0.22); /*divs shadow*/
+}
+.song-img{
+    width: 220px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 60px  rgba(255, 26, 26, 0.22);
+
+}
+.music-player h1{
+    font-size: 20px;
+    font-weight: 100; /*boldness*/
+    color: #333;
+    margin-top: 20px;/*increases space on top*/
+  
+}
+
+.music-player p{
+font-size: 14px;
+color: #333;
+}
+#progress{ /*calls the id we named progress*/
+    -webkit-appearance: none; /*google default has its own design for buttons and progress bars this remoevs it so we can do it*/
+    width: 100%;
+    height: 6px;
+    background: #f53192;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0px;
+    
+}
+#progress::-webkit-slider-thumb{ /*refers to the button on the slider so can reset its design as wellt*/
+    
+    -webkit-appearance: none;
+    background: #f53192;
+
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22)
+
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    margin: 20px;
+    display: flex;  
+    align-items: center; /*centers all div items in a div vertically*/
+    
+    justify-content: center;  /*centers all div items in a div horizontallu*/
+    
+    border-radius: 50%;
+    color:rgba(196, 13, 156, 0.575);
+    box-shadow:0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+.controls div:nth-child(2){
+transform: scale(1.5);
+background:rgba(196, 13, 156, 0.575);
+color:#fff;
+}
+.clicker:active {
+    box-shadow: 0 0px 0px rgb(179, 9, 9); /* New box-shadow while clicking */
+}
+
+.menu {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position it relative to the button */
+    background-color:rgba(196, 13, 156, 0.575);
+    border: 1px solid rgba(196, 13, 156, 0.575);
+    border-radius: 10px;
+    margin-top: 10px; /* Space between button and menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #1acf66; /* Highlight on hover */
+}
+
+#musicImage {
+    width: 200px; /* Set desired width */
+    height: 200px; /* Set desired height */
+    object-fit: cover; /* Ensures the image fits inside the box without distortion */
+    border-radius: 50%; /* If you want the image to be a circle */
+}
+
+
+
+
+
+
+.music-player2{
+    width: 400px;
+    padding: 25px 35px;
+    background: #65679c; /*#ffe0e5 WAS orginial*/
+    text-align: center;
+
+}
+
+.music-player2 h1{
+    font-size: 20px;
+    font-weight: 100; /*boldness*/
+    color: #333;
+    margin-top: 20px;/*increases space on top*/
+  
+}
+
+.music-player2 p{
+font-size: 14px;
+color: #333;
+}
+/*again*/
+.music-player3{
+    width: 400px;
+    padding: 25px 35px;
+    background: #8adda6; /*#ffe0e5 WAS orginial*/
+    text-align: center;
+
+}
+
+.music-player3 h1{
+    font-size: 20px;
+    font-weight: 100; /*boldness*/
+    color: #333;
+    margin-top: 20px;/*increases space on top*/
+  
+}
+
+.music-player3 p{
+font-size: 14px;
+color: #333;
+}
+
+
+
+
+.container2
+{
+width: 100%;
+height: 100vh;
+background-image: url("C:/Users/yeye6/OneDrive/MusicProject/dirtblock.png"); /* Overlay image */
+
+
+
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+
+
+}
